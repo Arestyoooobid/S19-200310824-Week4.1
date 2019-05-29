@@ -1,0 +1,49 @@
+﻿
+@model List<S19_200310824_Week4._1.Models.Car>
+
+@{
+    ViewBag.Title = "Cars List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Cars List</h2>
+
+<table style="width:50%;">
+    <th>
+        ID
+    </th>
+    <th>
+        Brand
+    </th>
+    <th>
+        Model
+    </th>
+    <th>
+        Type
+    </th>
+    <th>
+        Year
+    </th>
+    <tbody>
+        @foreach (var car in Model){
+            <tr>
+                <td>
+                    @car.Id
+                </td>
+                <td>
+                    @car.Brand
+                </td>
+                <td>
+                    @car.Model
+                </td>
+                <td>
+                    @car.Type
+                </td>
+                <td>
+                    @car.Year
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
